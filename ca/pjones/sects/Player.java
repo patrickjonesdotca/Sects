@@ -6,7 +6,16 @@ public class Player {
 	
 	private int points;
 	private ArrayList<Tile> tiles;
+	private DiscardPile discardPile;
 	
+	public DiscardPile getDiscardPile() {
+		return discardPile;
+	}
+
+	public void setDiscardPile(DiscardPile discardPile) {
+		this.discardPile = discardPile;
+	}
+
 	public ArrayList<Tile> getTiles() {
 		return tiles;
 	}
@@ -15,8 +24,8 @@ public class Player {
 		this.tiles = tiles;
 	}
 	
-	public void addTile(ArrayList<Tile> tiles, Tile tile) {
-		tiles.add(tile);
+	public void addTile(Tile tile) {
+		this.tiles.add(tile);
 	}
 
 	public Player() {

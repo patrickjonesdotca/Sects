@@ -9,7 +9,16 @@ public class Location {
 	private Location westLocation;
 	private Location southLocation;
 	private Location northLocation;
+	private Player ownedBy;
 	
+	public Player getOwnedBy() {
+		return ownedBy;
+	}
+
+	public void setOwnedBy(Player ownedBy) {
+		this.ownedBy = ownedBy;
+	}
+
 	public Location getEastLocation() {
 		return eastLocation;
 	}

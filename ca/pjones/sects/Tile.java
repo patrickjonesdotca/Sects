@@ -8,7 +8,30 @@ public class Tile {
 	private boolean canAttack;
 	private boolean hasSpecialAttack;
 	private boolean isAlive;
+	private Player owner;
+	private Location location;
 	
+	public void capture(Location newLocation) {
+		this.location = newLocation;
+		newLocation.setOwnedBy(this.owner);
+	}
+	
+	public Location getLocation() {
+		return location;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+
+	public Player getOwner() {
+		return owner;
+	}
+
+	public void setOwner(Player owner) {
+		this.owner = owner;
+	}
+
 	public boolean isAlive() {
 		return isAlive;
 	}
